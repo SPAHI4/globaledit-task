@@ -53,7 +53,7 @@ export function SignInForm() {
 • Input fields and the checkbox must not display errors during input.
 • No error messages should appear on the screen.
    */
-  const showErrors = false; // disabled to follow the description above
+  const showErrors = false; // disabled to follow the description above. If I got it wrong, please set it true
 
   return (
     <Card className={styles.container}>
