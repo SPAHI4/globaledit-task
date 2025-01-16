@@ -14,6 +14,9 @@ I set up the project using RSPack (A modern Webpack alternative with compatible 
 I added the eslint configuration and installed the necessary dependencies.
 
 
+There are no tests in the project as I was running out of time, but I would use Vitest and React Testing Library for testing.
+
+
 # File Structure
 ```
 📦 Root
