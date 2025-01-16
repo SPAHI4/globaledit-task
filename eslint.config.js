@@ -3,6 +3,7 @@ import js from '@eslint/js';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactJsx from 'eslint-plugin-react/configs/jsx-runtime.js';
 import react from 'eslint-plugin-react/configs/recommended.js';
+import reactCompiler from 'eslint-plugin-react-compiler';
 import eslintPluginImport from 'eslint-plugin-import';
 import globals from 'globals';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -25,12 +26,14 @@ export default [
   {
     plugins: {
       'react-hooks': reactHooks,
+      'react-compiler': reactCompiler,
       import: fixupPluginRules(eslintPluginImport),
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
       'react/no-children-prop': 'off',
       'react/prop-types': 'off',
+      'react-compiler/react-compiler': 'error',
 
       'import/order': [
         'error',
