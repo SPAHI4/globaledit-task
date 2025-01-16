@@ -1,0 +1,96 @@
+.button {
+    --button-height: 40px;
+    --button-padding: var(--space-md);
+    --button-radius: var(--radius);
+    --button-border-width: 1px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--button-height);
+    padding: 0 var(--button-padding);
+    border: var(--button-border-width) solid transparent;
+    border-radius: var(--button-radius);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-none);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+
+}
+
+.content {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.spinner {
+    width: var(--space-md);
+    height: var(--space-md);
+    animation: spin 1s linear infinite;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--space-md);
+    height: var(--space-md);
+}
+
+.default {
+    --bg-color: #ffffff;
+    background-color: var(--bg-color);
+    border-color: var(--color-text-disabled);
+    color: var(--color-text-inverse);
+
+    &:hover:not(:disabled) {
+        border-color: var(--color-text-secondary);
+        background-color: color-mix(in srgb, var(--bg-color) 80%, var(--color-text-disabled));
+    }
+
+    &:active:not(:disabled) {
+        background-color: color-mix(in srgb, var(--bg-color) 70%, var(--color-text-disabled));
+    }
+}
+
+.primary {
+    --bg-color: var(--color-primary);
+    background-color: var(--bg-color);
+    color: var(--color-text-primary);
+
+    &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, var(--bg-color) 80%, black);
+    }
+
+    &:active:not(:disabled) {
+        background-color: color-mix(in srgb, var(--bg-color) 70%, black);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

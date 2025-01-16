@@ -1,0 +1,52 @@
+.container {
+    width: 408px;
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-2xl);
+    place-items: center;
+}
+
+.form {
+    display: grid;
+    gap: var(--space-md);
+    justify-self: stretch;
+}
+
+.field {
+    display: grid;
+    gap: var(--space-sm);
+    justify-self: stretch;
+}
+
+.fieldError {
+    color: var(--color-error);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+}
+
+.signInOptions {
+    display: grid;
+    gap: var(--space-md);
+    place-items: center;
+    min-width: 60%;
+}
+
+.fieldCheckbox {
+    display: grid;
+    gap: var(--space-xs);
+    place-items: center;
+}
+
+.termsLink {
+    color: currentColor;
+    text-decoration: underline;
+}
+
+.forgotPasswordLink {
+    color: var(--color-text-secondary);
+}
+
+.passwordHints {
+    display: flex;
+    justify-content: center;
+}
