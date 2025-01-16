@@ -6,6 +6,8 @@ pnpm install
 pnpm run dev
 ```
 
+Use email: `test@example.com`, password: `Password123` to sign in
+
 
 # Summary
 

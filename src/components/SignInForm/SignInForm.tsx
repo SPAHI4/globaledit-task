@@ -43,7 +43,6 @@ export function SignInForm() {
     },
     schema: formSchema,
     onSubmit: (values) => {
-      console.log('Submitting', values);
       dispatch(signInRequest(values));
     },
   });
